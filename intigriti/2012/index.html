@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Intigriti December Challenge</title>
+  <meta charset="UTF-8">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@intigriti">
+  <meta name="twitter:creator" content="@intigriti">
+  <meta name="twitter:title" content="December XSS Challenge - Intigriti">
+  <meta name="twitter:description" content="Find the XSS and WIN Intigriti swag.">
+  <meta name="twitter:image" content="https://challenge-1220.intigriti.io/share.jpg">
+  <meta property="og:url" content="https://challenge-1220.intigriti.io" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="December XSS Challenge - Intigriti" />
+  <meta property="og:description" content="Find the XSS and WIN Intigriti swag." />
+  <meta property="og:image" content="https://challenge-1220.intigriti.io/share.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+</head>
+<body>
+  <section id="wrapper">
+  <header>
+    <img src="./logo-researcher.png">
+    <h1><a href="https://www.intigriti.com">Intigriti</a>'s December XSS Challenge</h1>
+  </header>
+  <section id="rules">
+    <div id="challenge-container">
+  <div id="challenge-info">
+    <p>Find a way to execute arbitrary javascript on this page and win Intigriti swag.</p>
+    <b>Rules:</b>
+    <ul>
+      <li>This challenge runs from December 7th until December 13th, 11:59 PM CET.</li>
+      <li>Out of all correct submissions, we will draw <b>six</b> winners on Monday, December 14th:
+        <ul>
+          <li>Three randomly drawn correct submissions</li>
+          <li>Three best write-ups</li>
+        </ul>
+      </li>
+      <li>Every winner gets a €50 swag voucher for our <a href="https://swag.intigriti.com" target="_blank">swag shop</a></li>
+      <li>The winners will be announced on our <a href="https://twitter.com/intigriti" target="_blank">Twitter profile</a>.</li>
+      <li>For every 100 likes, we'll add a tip to <a href="https://go.intigriti.com/challenge-tips" target="_blank">announcement tweet</a>.</li>
+    </ul>
+    <b>The solution...</b>
+    <ul>
+      <li>Should work on the latest version of Firefox or Chrome</li>
+      <li>Should execute the following JS: <code>alert(<strong>document.domain</strong>)</code>.</li>
+      <li>Should be executed on this domain (<a href="http://challenge-1220.intigriti.io" target="_blank">challenge-1220.intigriti.io</a>)</li>
+      <li>Shouldn't be self-XSS or related to MiTM attacks</li>
+      <li>Should be reported at <a href="https://go.intigriti.com/submit-solution">go.intigriti.com/submit-solution</a></li>
+    </ul>
+  </div>
+  <b>By the way...</b>
+  <p>Since we've <a href="https://twitter.com/intigriti/status/1334485539786006529" target="_blank">paid out €185.000 in bounties in one day</a>, we understand that some of our hackers need help calculating their bounty earnings. We asked our intern to create this fancy Intigriti bug bounty calculator for you. Enjoy!</p>
+</section>
+<section id="challenge">
+  <div id="calculator">
+    <div id="displays">
+      <input type="text" id="operation"/>
+      <input type="text" id="result" disabled/>
+    </div>
+    <div id="controls">
+      <div id="numbers">
+        <button class="number">7</button>
+        <button class="number">8</button>
+        <button class="number">9</button>
+        <button class="number">4</button>
+        <button class="number">5</button>
+        <button class="number">6</button>
+        <button class="number">1</button>
+        <button class="number">2</button>
+        <button class="number">3</button>
+        <button class="number">0</button>
+      </div>
+      <div id="operators">
+        <button class="operator">+</button>
+        <button class="operator">-</button>
+        <button class="operator">/</button>
+        <button class="operator">*</button>
+        <button class="clear">C</button>
+      </div>
+    </div>
+  </div>
+  </section>
+</section>
+  <script src="script.js"></script>
+</body>
+</html>
